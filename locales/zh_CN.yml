@@ -1,0 +1,121 @@
+zh_CN:
+  theme_metadata:
+    description: ""
+    settings:
+      callouts:
+        description: |
+          定义 Callout。
+          <br><br><br>
+          <h2>默认回退</h2>
+          当找不到指定类型时，定义要使用的默认 Callout 类型、图标和颜色。
+        schema:
+          properties:
+            type:
+              label: 类型
+              description: Callout 的类型。
+            alias:
+              label: 别名
+              description: >
+                Callout 的别名，使用 <tt>|</tt> 分隔。<br>
+                例如：<tt>cite|quote</tt>
+            icon:
+              label: 图标
+              description: >
+                Callout 使用的 <a href="https://fontawesome.com/search?ic=free" target="_blank" title="Search a fontawesome icon">fontawesome</a> 图标。<br>
+                如果默认子集中不可用，你可能需要将它添加到 <tt>svg_icons</tt> 设置。<br>
+                你也可以直接提供 SVG 元素，例如：<tt>&lt;svg&gt;...&lt;/svg&gt;</tt>。
+            icon_size:
+              label: 图标大小
+              description: >
+                Callout 图标的大小。<br>
+                注意：仅使用有效的 CSS 值，例如 <tt>1em</tt>、<tt>16px</tt>、<tt>1.5rem</tt>。
+            title:
+              label: 标题
+              description: >
+                Callout 的标题。<br>
+                如果 Callout 中未提供标题，将使用此设置。<br>
+                注意：如果两者都为空，标题将使用 Callout 类型。
+            color:
+              label: 颜色
+              description: >
+                Callout 的颜色。<br>
+                这将用于背景、标题和图标。<br>
+                注意：仅使用十六进制颜色代码，例如 <tt>#027aff</tt>。
+            border_width:
+              label: 边框宽度
+              description: Callout 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width" target="_blank" title="'border-width' CSS Documentation">border width</a>。
+            border_style:
+              label: 边框样式
+              description: Callout 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" target="_blank" title="'border-style' CSS Documentation">border style</a>。
+            border_color:
+              label: 边框颜色
+              description: >
+                Callout 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" target="_blank" title="'border-color' CSS Documentation">border color</a>。<br>
+                重要：如果你使用 <tt>rgba</tt> 等 CSS 函数来生成透明度，请确保值之间不要有空格，例如 <tt>rgba(145,145,145,0.1)</tt>。
+            border_radius:
+              label: 圆角半径
+              description: Callout 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank" title="'border-radius' CSS Documentation">border radius</a>。
+
+      callout_fallback_type:
+        description: 当找不到指定类型时要使用的默认 Callout 类型。
+      callout_fallback_icon:
+        description: |
+          当找不到指定类型时要使用的默认图标。<br>
+          如果默认子集中不可用，你可能需要将它添加到 <tt>svg_icons</tt> 设置。<br>
+          你也可以直接提供 SVG 元素，例如：<tt>&lt;svg&gt;...&lt;/svg&gt;</tt>。
+      callout_fallback_color:
+        description: |
+          当找不到指定类型时要使用的默认颜色。<br>
+          这将用于背景、标题和图标。<br>
+          注意：仅使用十六进制颜色代码，例如 <tt>#027aff</tt>。
+          <br><br><br>
+          <h2>全局样式</h2>
+          自定义 Callout 的默认外观。<br>
+          颜色和边框属性可按 Callout 类型单独覆盖。
+
+      callout_background_opacity:
+        description: Callout 的全局背景不透明度（1 到 100）。
+      callout_border_width:
+        description: Callout 的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width" target="_blank" title="'border-width' CSS Documentation">border width</a>。
+      callout_border_style:
+        description: Callout 的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" target="_blank" title="'border-style' CSS Documentation">border style</a>。
+      callout_border_color:
+        description: Callout 的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" target="_blank" title="'border-color' CSS Documentation">border color</a>。
+      callout_border_radius:
+        description: Callout 的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank" title="'border-radius' CSS Documentation">border radius</a>。
+      callout_padding:
+        description: Callout 的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank" title="'padding' CSS Documentation">padding</a>。
+      callout_title_font_size:
+        description: Callout 标题的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank" title="'font-size' CSS Documentation">font size</a>。
+      callout_title_font_weight:
+        description: Callout 标题的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank" title="'font-weight' CSS Documentation">font weight</a>。
+      callout_title_gap:
+        description: Callout 图标与标题之间的全局 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" target="_blank" title="'gap' CSS Documentation">gap</a>。
+      callout_icon_size:
+        description: Callout 图标的全局大小。
+      callout_transition_duration_ms:
+        description: 展开与收起动画的时长（毫秒）。
+      svg_icons:
+        description: 此主题组件使用的 FontAwesome 图标列表。
+
+  composer:
+    callout: 插入 Callout
+    delete_callout: 删除 Callout
+    callout_content: 内容
+    insert_callout: 插入一个 Callout
+    menu:
+      folding: 折叠
+      folding_options:
+        none: 无
+        collapsed: 默认收起
+        expanded: 默认展开
+      more_options: 更多选项
+      toggle_folding: 切换折叠
+      add_body: 添加正文
+      insert_paragraph_after: 在后方插入段落
+      move: 移动
+      move_up: 上移
+      move_down: 下移
+      nest_up: 嵌套到上一个
+      nest_down: 嵌套到下一个
+      search: 搜索...
